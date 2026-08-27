@@ -1,3 +1,5 @@
+import portraitImg from "./ayo.jpeg";
+
 /* ── Perfil ─────────────────────────────────────────────── */
 export const fullName = "Cristian Damián Calderón Puerta";
 export const email = "crisdam1840@gmail.com";
@@ -284,5 +286,4 @@ export const socials = [
   },
 ];
 
-export const portraitImage =
-  "https://image.qwenlm.ai/generated-images/44917b1d-fe8f-41d7-bf82-cb7cc3040b92/_result.png";
+export const portraitImage = portraitImg;
