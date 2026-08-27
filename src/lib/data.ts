@@ -103,11 +103,11 @@ export interface EducationItem {
 
 export const education: EducationItem[] = [
   {
-    period: "2025 — En curso",
-    title: "Ingeniería de Sistemas",
-    institution: "UNAD — Universidad Nacional Abierta y a Distancia",
-    place: "Tunja, Colombia",
-    note: "Formación profesional que complementa la base técnica con fundamentos de arquitectura de software, redes y gestión de proyectos.",
+    period: "2023 — En curso (7° Semestre)",
+    title: "Ingeniería de Software",
+    institution: "Corporación Universitaria Tecnológica del Oriente",
+    place: "Colombia",
+    note: "Formación profesional enfocada en el ciclo completo de vida del software, patrones de diseño, arquitectura y metodologías ágiles.",
   },
   {
     period: "Graduado · Dic 2020",
