@@ -1,11 +1,10 @@
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
-import Projects from "./components/Projects";
-import Services from "./components/Services";
-import About from "./components/About";
 import Experience from "./components/Experience";
-import Testimonials from "./components/Testimonials";
+import Services from "./components/Services";
+import Stack from "./components/Stack";
+import About from "./components/About";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -27,11 +26,10 @@ export default function App() {
       <main className="relative z-10">
         <Hero />
         <Marquee />
-        <Projects />
-        <Services />
-        <About />
         <Experience />
-        <Testimonials />
+        <Services />
+        <Stack />
+        <About />
         <Footer />
       </main>
     </div>

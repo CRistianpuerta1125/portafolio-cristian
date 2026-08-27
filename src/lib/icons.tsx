@@ -135,6 +135,70 @@ export function ColombiaFlag({ className = "w-4 h-3" }: IconProps) {
   );
 }
 
+export function Phone({ className = "w-4 h-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M7 3.5h2.2l1.5 4-2 1.6a13.8 13.8 0 0 0 6.2 6.2l1.6-2 4 1.5V17a3 3 0 0 1-3.2 3A16.5 16.5 0 0 1 4 6.7 3 3 0 0 1 7 3.5Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function WhatsApp({ className = "w-4 h-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+      <path d="M12 2.1a9.9 9.9 0 0 0-8.53 14.95L2.1 21.9l4.98-1.31A9.9 9.9 0 1 0 12 2.1Zm0 1.8a8.1 8.1 0 1 1-4.2 15.02l-.3-.18-2.94.78.79-2.87-.2-.3A8.1 8.1 0 0 1 12 3.9ZM8.9 7.8c-.17 0-.45.06-.69.32-.23.25-.9.88-.9 2.14 0 1.27.92 2.5 1.05 2.67.13.18 1.79 2.85 4.4 3.88 2.18.86 2.62.7 3.1.65.47-.04 1.53-.63 1.75-1.23.22-.6.22-1.12.15-1.23-.07-.1-.24-.17-.5-.3-.26-.12-1.53-.75-1.77-.84-.24-.08-.41-.12-.58.14-.17.25-.66.84-.81 1.01-.15.17-.3.2-.56.07a7.1 7.1 0 0 1-2.08-1.28 7.8 7.8 0 0 1-1.44-1.79c-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.43.08-.17.04-.33-.02-.46-.07-.13-.58-1.39-.8-1.9-.2-.46-.4-.4-.57-.4h-.44Z" />
+    </svg>
+  );
+}
+
+export function CodeGlyph({ className = "w-5 h-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="m8 8-4 4 4 4m8-8 4 4-4 4M13.5 5l-3 14"
+        stroke="currentColor"
+        strokeWidth="1.7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function LayersGlyph({ className = "w-5 h-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="m12 3 8 4.5-8 4.5-8-4.5L12 3Zm-8 9 8 4.5 8-4.5M4 16.5 12 21l8-4.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function ToolsGlyph({ className = "w-5 h-5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <path
+        d="M14.5 6.5a4 4 0 0 0-5.4 4.8L4 16.4a2 2 0 1 0 2.8 2.8l5.1-5.1a4 4 0 0 0 4.8-5.4l-2.6 2.6-2.2-.6-.6-2.2 2.6-2.6.6.6Z"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="m15 15 4.5 4.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export function XSocial({ className = "w-4 h-4" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">

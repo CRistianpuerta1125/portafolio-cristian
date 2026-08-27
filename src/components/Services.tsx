@@ -7,26 +7,29 @@ export default function Services() {
   const [openId, setOpenId] = useState<string | null>(services[0].id);
 
   return (
-    <section id="servicios" className="relative scroll-mt-20 border-t border-line/60 bg-deep py-24 sm:py-32">
+    <section
+      id="servicios"
+      className="relative scroll-mt-20 border-t border-line/60 bg-deep py-24 sm:py-32"
+    >
       <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
         {/* columna sticky */}
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal variant="mask">
             <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
-              (02) — Servicios
+              (03) — Servicios
             </span>
           </Reveal>
           <Reveal variant="mask" delay={120}>
             <h2 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-mist sm:text-6xl">
               Lo que puedo hacer por{" "}
-              <span className="text-amber">tu marca</span>
+              <span className="text-amber">tu equipo</span>
             </h2>
           </Reveal>
           <Reveal delay={220}>
             <p className="mt-6 max-w-sm leading-relaxed text-fog">
-              Trabajo como estudio de una sola persona con una red de
-              colaboradores de confianza. Sin capas, sin teléfono
-              descompuesto: hablas con quien diseña y programa.
+              Trabajo de punta a punta: del requerimiento y el modelado de
+              datos hasta el deploy y la documentación. Un solo responsable,
+              de la idea a producción.
             </p>
           </Reveal>
           <Reveal delay={300}>

@@ -1,101 +1,122 @@
-export interface Project {
-  id: string;
-  index: string;
-  title: string;
-  category: string;
-  year: string;
+/* ── Perfil ─────────────────────────────────────────────── */
+export const fullName = "Cristian Damián Calderón Puerta";
+export const email = "crisdam1840@gmail.com";
+export const phone = "+57 314 381 3679";
+export const phoneHref = "tel:+573143813679";
+export const whatsappHref = "https://wa.me/573143813679";
+export const linkedinUrl = "https://www.linkedin.com/in/damian-calderon-6135b6357";
+export const linkedinHandle = "damian-calderon";
+
+/* ── Experiencia ────────────────────────────────────────── */
+export interface ExperienceItem {
+  period: string;
   role: string;
-  description: string;
+  company: string;
+  place: string;
+  current?: boolean;
   highlights: string[];
-  tags: string[];
-  image: string;
-  alt: string;
-  award?: string;
 }
 
-export const projects: Project[] = [
+export const experience: ExperienceItem[] = [
   {
-    id: "nebula",
-    index: "01",
-    title: "Nébula",
-    category: "Visualización de datos · WebGL",
-    year: "2025",
-    role: "Desarrollo creativo & dirección de arte",
-    description:
-      "Plataforma inmersiva para el Festival Pulso: convierte el audio en vivo —bpm, frecuencia y energía de la pista— en una nebulosa de partículas 3D que respira con el concierto. Cada asistente ve su propia constelación del festival.",
+    period: "Abr 2025 — Actualidad",
+    role: "Desarrollador Full Stack",
+    company: "Instituto Distrital de Recreación y Deporte — IDRD",
+    place: "Bogotá, Colombia",
+    current: true,
     highlights: [
-      "1.2M de partículas animadas a 60fps con shaders propios",
-      "Site of the Day en Awwwards y FWA of the Day",
-      "+38% de conversión en venta de abonos 2025",
+      "Desarrollo web front-end y back-end de punta a punta.",
+      "Diseño e implementación de bases de datos.",
+      "Creación de documentación técnica y funcional.",
+      "Acompañamiento a proyectos tecnológicos y soporte a usuarios.",
+      "Participación en las distintas fases del ciclo de vida del software.",
     ],
-    tags: ["Three.js", "GLSL", "React", "Web Audio API"],
-    image:
-      "https://image.qwenlm.ai/generated-images/4db5fff3-f963-4edf-9188-5fd54c5811da/_result.png",
-    alt: "Interfaz oscura de Nébula con una nebulosa de partículas en turquesa y ámbar",
-    award: "Awwwards · SOTD",
   },
   {
-    id: "cardal",
-    index: "02",
-    title: "Cardal",
-    category: "E-commerce · Dirección de arte",
-    year: "2024",
-    role: "Diseño de interacción & front-end",
-    description:
-      "Tienda en línea para un estudio de cerámica artesanal. Cada pieza se fotografía como escultura: luz ámbar sobre fondo petróleo, transiciones lentas y un checkout que se siente como hojear un catálogo de autor.",
+    period: "2025",
+    role: "Desarrollador Full Stack",
+    company: "TESTLAB S.A.S.",
+    place: "Bogotá, Colombia",
     highlights: [
-      "Lighthouse 99/100 con fotografía de gran formato",
-      "Transición de producto a detalle sin recarga (View Transitions)",
-      "Ticket promedio +22% en los primeros 3 meses",
+      "Desarrollo web front-end y back-end.",
+      "Diseño e implementación de bases de datos.",
+      "Creación de documentación técnica y funcional.",
+      "Soporte a proyectos tecnológicos y a usuarios finales.",
+      "Participación en todas las fases del ciclo de desarrollo.",
     ],
-    tags: ["Next.js", "Shopify Hydrogen", "GSAP", "Sanity"],
-    image:
-      "https://image.qwenlm.ai/generated-images/8fc1ac1a-350c-4bd0-8b50-f5dfb354993f/_result.png",
-    alt: "Sitio minimalista de Cardal con vasijas de cerámica sobre fondo oscuro",
-    award: "CSSDA · Best UI",
   },
   {
-    id: "vertice",
-    index: "03",
-    title: "Vértice",
-    category: "Editorial digital · Arquitectura",
-    year: "2024",
-    role: "Desarrollo front-end & motion",
-    description:
-      "Revista digital para un estudio de arquitectura: retícula brutalista, tipografía descomunal y fotografía de concreto que se despliega con scroll narrativo. Leer un artículo se siente como recorrer un edificio.",
+    period: "Abr 2022 — Mar 2025",
+    role: "Desarrollador Front End",
+    company: "Instituto Distrital de las Artes — Idartes",
+    place: "Bogotá, Colombia",
     highlights: [
-      "Scroll narrativo con 14 secciones sincronizadas",
-      "Tipografía variable que responde al avance de lectura",
-      "Medalla de plata en ÑH · Lo Mejor del Diseño Editorial",
+      "Desarrollo y mantenimiento de módulos front-end.",
+      "Foco permanente en la optimización de la experiencia de usuario.",
     ],
-    tags: ["Astro", "GSAP ScrollTrigger", "Cloudinary", "MDX"],
-    image:
-      "https://image.qwenlm.ai/generated-images/d8ba10bd-2835-4205-9f8e-83f4daa9a110/_result.png",
-    alt: "Portada editorial de Vértice con tipografía brutalista y fotografía de concreto",
-    award: "ÑH · Plata",
   },
   {
-    id: "ritmo",
-    index: "04",
-    title: "Ritmo",
-    category: "Identidad generativa · Música",
-    year: "2023",
-    role: "Arte generativo & desarrollo",
-    description:
-      "Sistema de identidad para un sello discográfico independiente: cada lanzamiento genera su propia portada a partir de la forma de onda del máster. Un motor, infinitas carátulas —del vinilo al streaming.",
+    period: "Nov 2024 — Mar 2025",
+    role: "Desarrollador Front End",
+    company: "Neural Tech",
+    place: "Bogotá, Colombia",
     highlights: [
-      "Motor generativo que exportó 400+ portadas únicas",
-      "Audio-reactivo en tiempo real para visuales de gira",
-      "Seleccionado en el anuario Typographics 2024",
+      "Diseño de interfaces UX intuitivas y sistemas front-end responsivos.",
+      "Integración de APIs back-end para una comunicación fluida de datos.",
+      "Optimización del rendimiento y resolución proactiva de incidencias técnicas.",
     ],
-    tags: ["p5.js", "Canvas", "Node.js", "FFmpeg"],
-    image:
-      "https://image.qwenlm.ai/generated-images/1d69a7e7-7ed8-4804-8f01-4b4ef45a9d87/_result.png",
-    alt: "Formas de onda en ámbar y coral sobre fondo petróleo para el sello Ritmo",
-    award: "Typographics · Anuario",
+  },
+  {
+    period: "Mar 2024 — Nov 2024",
+    role: "Desarrollador Full Stack",
+    company: "Serviware SAS",
+    place: "Tunja, Colombia",
+    highlights: [
+      "Aplicaciones escalables con Vue.js y Angular.js (front), Symfony, Java y TypeScript (back).",
+      "Administración de bases de datos PL/SQL y MySQL: integridad y optimización.",
+      "Despliegue de soluciones en servidores Linux para maximizar el rendimiento.",
+    ],
+  },
+  {
+    period: "Feb 2023 — Ene 2024",
+    role: "Desarrollador Web Full Stack",
+    company: "Stark Lower SAS",
+    place: "Bogotá, Colombia",
+    highlights: [
+      "Desarrollo de una API en Python para la lógica del back-end.",
+      "Interfaces dinámicas con React.js y manejo de estado con Redux.",
+      "Rendimiento óptimo e interacciones de usuario intuitivas.",
+    ],
   },
 ];
 
+/* ── Formación ──────────────────────────────────────────── */
+export interface EducationItem {
+  period: string;
+  title: string;
+  institution: string;
+  place: string;
+  note: string;
+}
+
+export const education: EducationItem[] = [
+  {
+    period: "2025 — En curso",
+    title: "Ingeniería de Sistemas",
+    institution: "UNAD — Universidad Nacional Abierta y a Distancia",
+    place: "Tunja, Colombia",
+    note: "Formación profesional que complementa la base técnica con fundamentos de arquitectura de software, redes y gestión de proyectos.",
+  },
+  {
+    period: "Graduado · Dic 2020",
+    title: "Tecnólogo en Análisis y Desarrollo de Sistemas de Información",
+    institution: "SENA",
+    place: "Ibagué, Colombia",
+    note: "Base técnica en análisis, diseño y desarrollo de sistemas de información: bases de datos, programación y ciclo de vida del software.",
+  },
+];
+
+/* ── Servicios ──────────────────────────────────────────── */
 export interface Service {
   id: string;
   number: string;
@@ -106,185 +127,162 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "desarrollo",
+    id: "fullstack",
     number: "01",
-    title: "Desarrollo creativo",
+    title: "Desarrollo web Full Stack",
     description:
-      "Sitios a medida donde el código es parte del diseño: WebGL, shaders, canvas y arquitecturas front-end que aguantan el tráfico de un lanzamiento sin perder un frame.",
-    tags: ["React", "Three.js", "GLSL", "Astro", "TypeScript"],
+      "Construcción de aplicaciones de punta a punta: interfaces dinámicas con React, Vue o Angular y back-ends robustos con Symfony, Java, TypeScript o Python.",
+    tags: ["React.js", "Vue.js", "Angular.js", "Symfony", "Java", "TypeScript"],
   },
   {
-    id: "interaccion",
+    id: "datos",
     number: "02",
-    title: "Diseño de interacción",
+    title: "Bases de datos",
     description:
-      "Coreografío cada gesto: micro-interacciones, transiciones de página y scroll narrativo que guían la lectura. Nada se mueve por decorado — todo comunica estado.",
-    tags: ["GSAP", "Framer Motion", "Prototipado", "Design systems"],
+      "Diseño e implementación de bases de datos MySQL y PL/SQL con foco en integridad, normalización y optimización de consultas para aplicaciones exigentes.",
+    tags: ["MySQL", "PL/SQL", "SQL", "Modelado de datos"],
   },
   {
-    id: "direccion",
+    id: "apis",
     number: "03",
-    title: "Dirección de arte digital",
+    title: "APIs e integraciones",
     description:
-      "Del moodboard al último píxel: sistemas visuales para pantalla con tipografía con carácter, paletas con temperatura y fotografía que no parece de stock.",
-    tags: ["Identidad", "Tipografía", "Figma", "Fotografía"],
+      "Desarrollo de APIs —como la API en Python de Stark Lower— e integración con el front-end para una comunicación de datos fluida y confiable.",
+    tags: ["Python", "REST", "Redux", "Integraciones"],
   },
   {
-    id: "motion",
+    id: "deploy",
     number: "04",
-    title: "Motion & 3D",
+    title: "Despliegue & servidores",
     description:
-      "Piezas en movimiento para lanzamientos: loops para redes, visuales audio-reactivos para shows y escenas 3D en tiempo real que corren en el navegador.",
-    tags: ["Blender", "After Effects", "Web Audio", "Lottie"],
+      "Soluciones desplegadas y administradas en servidores Linux, orientadas a maximizar rendimiento, estabilidad y disponibilidad en producción.",
+    tags: ["Linux", "Deploy", "Rendimiento"],
   },
   {
-    id: "consultoria",
+    id: "docs",
     number: "05",
-    title: "Auditoría & consultoría",
+    title: "Documentación & soporte",
     description:
-      "Reviso tu producto con lupa técnica y visual: performance, accesibilidad, Core Web Vitals y ese detalle de motion que separa lo correcto de lo memorable.",
-    tags: ["Performance", "Accesibilidad", "Core Web Vitals", "Code review"],
+      "Documentación técnica y funcional, acompañamiento a usuarios y participación activa en todas las fases del ciclo de vida del software.",
+    tags: ["SDLC", "Documentación", "Soporte a usuarios"],
   },
 ];
 
-export interface ExperienceItem {
-  period: string;
-  role: string;
-  company: string;
-  place: string;
-  description: string;
+/* ── Stack ──────────────────────────────────────────────── */
+export interface SkillGroup {
+  id: string;
+  category: string;
+  note: string;
+  icon: "code" | "layers" | "tools";
+  skills: string[];
 }
 
-export const experience: ExperienceItem[] = [
+export const skillGroups: SkillGroup[] = [
   {
-    period: "2023 — Hoy",
-    role: "Desarrolladora creativa independiente",
-    company: "Estudio Ríos Digital",
-    place: "Bogotá · Remoto",
-    description:
-      "Proyectos selectos para marcas culturales, festivales y estudios de diseño en Colombia y el resto de LATAM. De la dirección de arte al deploy.",
+    id: "lenguajes",
+    category: "Lenguajes",
+    note: "La base de todo",
+    icon: "code",
+    skills: ["SQL", "PL/SQL", "Python", "PHP", "TypeScript", "JavaScript"],
   },
   {
-    period: "2021 — 2023",
-    role: "Senior Creative Developer",
-    company: "Agencia Mono",
-    place: "Bogotá",
-    description:
-      "Lideré el equipo interactivo: 12 lanzamientos, 4 sitios premiados y la migración completa del estudio a un pipeline WebGL reutilizable.",
+    id: "frameworks",
+    category: "Frameworks & librerías",
+    note: "Front y back",
+    icon: "layers",
+    skills: ["Symfony", "React.js", "Angular.js", "Vue.js", "Redux", "Java"],
   },
   {
-    period: "2019 — 2021",
-    role: "Front-end Developer",
-    company: "Andén (fintech)",
-    place: "Medellín",
-    description:
-      "Construí el design system y la web app de inversiones. Aprendí que la buena ingeniería también es una forma de diseño.",
+    id: "herramientas",
+    category: "Herramientas & datos",
+    note: "El día a día",
+    icon: "tools",
+    skills: ["MySQL", "Linux", "Power BI", "Excel", "Word"],
   },
-  {
-    period: "2017 — 2019",
-    role: "Diseñadora interactiva",
-    company: "Estudio Praxis",
-    place: "Cali",
-    description:
-      "Primera chispa: banners que parecían cortos animados, instalaciones con sensores y muchas noches de After Effects.",
-  },
-];
-
-export interface Testimonial {
-  quote: string;
-  name: string;
-  role: string;
-}
-
-export const testimonials: Testimonial[] = [
-  {
-    quote:
-      "Valeria no entrega páginas: entrega experiencias que la gente graba con el teléfono. Nébula nos dio la campaña más compartida en la historia del festival.",
-    name: "Mariana Solís",
-    role: "Directora de marca · Festival Pulso",
-  },
-  {
-    quote:
-      "Entendió la cerámica mejor que nosotros. La tienda se siente tan hecha a mano como nuestras piezas — y vende el doble.",
-    name: "Íñigo Ferreyra",
-    role: "Fundador · Estudio Cardal",
-  },
-  {
-    quote:
-      "Pocos perfiles dominan tipografía, código y narrativa al mismo tiempo. El scroll de Vértice es lo más cercano a caminar un edificio.",
-    name: "Camila Duarte",
-    role: "Editora en jefe · Vértice",
-  },
-];
-
-export const marqueeItems = [
-  "Desarrollo creativo",
-  "WebGL & shaders",
-  "Dirección de arte",
-  "Motion design",
-  "React · TypeScript",
-  "Identidad generativa",
-  "Diseño de interacción",
-  "Scroll narrativo",
 ];
 
 export const toolbox = [
+  "SQL",
+  "PL/SQL",
+  "Python",
+  "PHP",
   "TypeScript",
-  "React",
-  "Three.js",
-  "GLSL",
-  "GSAP",
-  "Astro",
-  "Next.js",
-  "Node.js",
-  "Figma",
-  "Blender",
-  "p5.js",
-  "Sanity",
+  "JavaScript",
+  "Symfony",
+  "React.js",
+  "Angular.js",
+  "Vue.js",
+  "Redux",
+  "Java",
+  "MySQL",
+  "Linux",
+  "Power BI",
 ];
 
+/* ── Cifras ─────────────────────────────────────────────── */
 export const counters = [
-  { value: 7, suffix: "", label: "años de oficio" },
-  { value: 52, suffix: "+", label: "proyectos lanzados" },
-  { value: 31, suffix: "", label: "clientes en 6 países" },
-  { value: 9, suffix: "", label: "premios y menciones" },
+  { value: 3, suffix: "+", label: "años de experiencia" },
+  { value: 6, suffix: "", label: "empresas & equipos" },
+  { value: 12, suffix: "+", label: "tecnologías en el stack" },
+  { value: 2, suffix: "", label: "programas de formación" },
 ];
 
+/* ── Marquee ────────────────────────────────────────────── */
+export const marqueeItems = [
+  "TypeScript",
+  "JavaScript",
+  "Python",
+  "PHP",
+  "SQL · PL/SQL",
+  "React.js",
+  "Vue.js",
+  "Angular.js",
+  "Symfony",
+  "Redux",
+  "MySQL",
+  "Linux",
+  "Power BI",
+];
+
+/* ── Navegación ─────────────────────────────────────────── */
 export const navLinks = [
-  { label: "Proyectos", href: "#proyectos" },
+  { label: "Experiencia", href: "#experiencia" },
   { label: "Servicios", href: "#servicios" },
+  { label: "Stack", href: "#stack" },
   { label: "Sobre mí", href: "#sobre" },
-  { label: "Trayectoria", href: "#trayectoria" },
 ];
 
+/* ── Contacto / redes ───────────────────────────────────── */
 export const socials = [
   {
-    label: "GitHub",
-    handle: "@valeriarios",
-    href: "https://github.com",
-    icon: "github" as const,
-  },
-  {
     label: "LinkedIn",
-    handle: "in/valeriarios",
-    href: "https://linkedin.com",
+    handle: linkedinHandle,
+    href: linkedinUrl,
     icon: "linkedin" as const,
+    external: true,
   },
   {
-    label: "Instagram",
-    handle: "@rios.digital",
-    href: "https://instagram.com",
-    icon: "instagram" as const,
+    label: "Correo",
+    handle: email,
+    href: `mailto:${email}`,
+    icon: "mail" as const,
+    external: false,
   },
   {
-    label: "X / Twitter",
-    handle: "@rios_dev",
-    href: "https://x.com",
-    icon: "x" as const,
+    label: "Teléfono",
+    handle: phone,
+    href: phoneHref,
+    icon: "phone" as const,
+    external: false,
+  },
+  {
+    label: "WhatsApp",
+    handle: "Escríbeme directo",
+    href: whatsappHref,
+    icon: "whatsapp" as const,
+    external: true,
   },
 ];
 
 export const portraitImage =
-  "https://image.qwenlm.ai/generated-images/15537d91-6b44-493d-9366-ea9188d5c3a9/_result.png";
-
-export const email = "hola@valeriarios.co";
+  "https://image.qwenlm.ai/generated-images/44917b1d-fe8f-41d7-bf82-cb7cc3040b92/_result.png";

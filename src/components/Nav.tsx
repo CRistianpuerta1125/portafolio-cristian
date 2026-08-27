@@ -23,12 +23,12 @@ export default function Nav() {
             href="#inicio"
             className="group flex items-baseline gap-1 font-display text-xl font-bold tracking-tight text-mist"
           >
-            VR
+            CC
             <span className="text-amber transition-transform duration-300 group-hover:rotate-90 inline-block">
               <Spark className="w-3.5 h-3.5" />
             </span>
             <span className="ml-2 hidden font-mono text-[10px] uppercase tracking-[0.25em] text-fog sm:inline">
-              estudio — 26
+              full stack — 26
             </span>
           </a>
 
