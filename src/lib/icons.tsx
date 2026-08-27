@@ -125,6 +125,16 @@ export function Instagram({ className = "w-4 h-4" }: IconProps) {
   );
 }
 
+export function ColombiaFlag({ className = "w-4 h-3" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 14" className={className} aria-label="Bandera de Colombia" role="img">
+      <rect width="20" height="7" fill="#F2B441" />
+      <rect y="7" width="20" height="3.5" fill="#2E6E9E" />
+      <rect y="10.5" width="20" height="3.5" fill="#C84B3C" />
+    </svg>
+  );
+}
+
 export function XSocial({ className = "w-4 h-4" }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">

@@ -6,6 +6,7 @@ import {
   GitHub,
   Instagram,
   LinkedIn,
+  ColombiaFlag,
   Mail,
   Spark,
   XSocial,
@@ -99,10 +100,11 @@ export default function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-line/60 pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-fog sm:flex-row">
           <span className="flex items-center gap-2">
             <Spark className="h-3 w-3 text-amber" />
-            © 2026 Valeria Ríos — Diseñado y programado a mano
+            © 2026 Valeria Ríos — Hecho en Colombia · programado a mano
           </span>
           <span className="flex items-center gap-2">
-            CDMX
+            <ColombiaFlag className="w-5 h-3.5 border border-line/50" />
+            Bogotá · COL
             <span className="animate-blink inline-block h-1.5 w-1.5 bg-amber" />
             {time} h
           </span>

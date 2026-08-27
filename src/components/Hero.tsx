@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { usePrefersReducedMotion, useScramble } from "../lib/motion";
-import { ArrowDown, ArrowUpRight, Spark } from "../lib/icons";
+import { ArrowDown, ArrowUpRight, ColombiaFlag, Spark } from "../lib/icons";
 
 export default function Hero() {
   const reduced = usePrefersReducedMotion();
@@ -34,7 +34,10 @@ export default function Hero() {
             <Spark className="h-3 w-3 text-amber" />
             Portafolio — vol. 2026
           </span>
-          <span className="hidden sm:inline">CDMX · Remoto (GMT−6)</span>
+          <span className="hidden items-center gap-2 sm:inline-flex">
+            <ColombiaFlag className="w-5 h-3.5 border border-line/50" />
+            Bogotá · Colombia (GMT−5)
+          </span>
           <span className="text-amber">Abierta a proyectos</span>
         </div>
 

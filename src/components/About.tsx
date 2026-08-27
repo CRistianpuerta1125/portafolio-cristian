@@ -45,7 +45,7 @@ export default function About() {
                 className="animate-breathe h-full w-full object-cover"
               />
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-ink/80 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.22em] text-fog backdrop-blur-sm">
-                <span>CDMX — 19:42</span>
+                <span>Bogotá — GMT−5</span>
                 <span className="flex items-center gap-1.5 text-amber">
                   <Spark className="h-3 w-3" />
                   retrato · F. Guerra
@@ -74,9 +74,9 @@ export default function About() {
           <Reveal delay={200}>
             <div className="mt-7 space-y-5 leading-relaxed text-fog">
               <p>
-                Soy <strong className="font-semibold text-mist">Valeria Ríos</strong>:
-                empecé animando banners a los 19 y terminé dirigiendo experiencias
-                interactivas para festivales, fintechs y estudios de arquitectura.
+                Soy <strong className="font-semibold text-mist">Valeria Ríos</strong>, desarrolladora
+                creativa colombiana. Desde Bogotá dirijo experiencias interactivas para
+                festivales, fintechs y estudios de arquitectura de todo el mundo.
                 Vivo en esa frontera rara —y fértil— entre el diseño y la ingeniería.
               </p>
               <p>

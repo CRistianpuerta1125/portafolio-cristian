@@ -160,15 +160,15 @@ export const experience: ExperienceItem[] = [
     period: "2023 — Hoy",
     role: "Desarrolladora creativa independiente",
     company: "Estudio Ríos Digital",
-    place: "CDMX · Remoto",
+    place: "Bogotá · Remoto",
     description:
-      "Proyectos selectos para marcas culturales, festivales y estudios de diseño en LATAM y Europa. De la dirección de arte al deploy.",
+      "Proyectos selectos para marcas culturales, festivales y estudios de diseño en Colombia y el resto de LATAM. De la dirección de arte al deploy.",
   },
   {
     period: "2021 — 2023",
     role: "Senior Creative Developer",
     company: "Agencia Mono",
-    place: "Ciudad de México",
+    place: "Bogotá",
     description:
       "Lideré el equipo interactivo: 12 lanzamientos, 4 sitios premiados y la migración completa del estudio a un pipeline WebGL reutilizable.",
   },
@@ -176,7 +176,7 @@ export const experience: ExperienceItem[] = [
     period: "2019 — 2021",
     role: "Front-end Developer",
     company: "Andén (fintech)",
-    place: "Guadalajara",
+    place: "Medellín",
     description:
       "Construí el design system y la web app de inversiones. Aprendí que la buena ingeniería también es una forma de diseño.",
   },
@@ -184,7 +184,7 @@ export const experience: ExperienceItem[] = [
     period: "2017 — 2019",
     role: "Diseñadora interactiva",
     company: "Estudio Praxis",
-    place: "Monterrey",
+    place: "Cali",
     description:
       "Primera chispa: banners que parecían cortos animados, instalaciones con sensores y muchas noches de After Effects.",
   },
@@ -287,4 +287,4 @@ export const socials = [
 export const portraitImage =
   "https://image.qwenlm.ai/generated-images/15537d91-6b44-493d-9366-ea9188d5c3a9/_result.png";
 
-export const email = "hola@valeriarios.dev";
+export const email = "hola@valeriarios.co";

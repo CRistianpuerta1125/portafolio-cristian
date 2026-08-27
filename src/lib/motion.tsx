@@ -159,8 +159,8 @@ export function useCountUp(target: number, start: boolean, duration = 1500): num
   return value;
 }
 
-/* Reloj en vivo (zona horaria de CDMX). */
-export function useClock(timeZone = "America/Mexico_City"): string {
+/* Reloj en vivo (zona horaria de Bogotá, Colombia). */
+export function useClock(timeZone = "America/Bogota"): string {
   const [time, setTime] = useState("--:--:--");
   useEffect(() => {
     const fmt = new Intl.DateTimeFormat("es-MX", {
