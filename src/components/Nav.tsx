@@ -49,9 +49,9 @@ export default function Nav() {
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-4">
             {/* Toggle de Idioma */}
-            <div className="flex items-center rounded-sm border border-line bg-card/60 p-1 font-mono text-[10px] uppercase tracking-wider text-fog">
+            <div className="flex shrink-0 items-center rounded-sm border border-line bg-card/60 p-1 font-mono text-[10px] uppercase tracking-wider text-fog">
               <button
                 onClick={() => setLang("es")}
                 className={`px-2 py-0.5 transition-colors ${
@@ -90,7 +90,7 @@ export default function Nav() {
               onClick={() => setOpen(!open)}
               aria-label={open ? t.closeMenu : t.openMenu}
               aria-expanded={open}
-              className="flex h-10 w-10 items-center justify-center border border-line text-mist transition-colors hover:border-amber hover:text-amber md:hidden"
+              className="flex h-10 w-10 shrink-0 items-center justify-center border border-line text-mist transition-colors hover:border-amber hover:text-amber md:hidden"
             >
               {open ? <Close /> : <Menu />}
             </button>
