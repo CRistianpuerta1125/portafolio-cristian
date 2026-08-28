@@ -1,4 +1,5 @@
 import portraitImg from "./ayo.jpeg";
+import { Language } from "./LanguageContext";
 
 /* ── Perfil ─────────────────────────────────────────────── */
 export const fullName = "Cristian Damián Calderón Puerta";
@@ -19,7 +20,7 @@ export interface ExperienceItem {
   highlights: string[];
 }
 
-export const experience: ExperienceItem[] = [
+const experienceES: ExperienceItem[] = [
   {
     period: "Abr 2025 — Actualidad",
     role: "Desarrollador Full Stack",
@@ -93,6 +94,84 @@ export const experience: ExperienceItem[] = [
   },
 ];
 
+const experienceEN: ExperienceItem[] = [
+  {
+    period: "Apr 2025 — Present",
+    role: "Full Stack Developer",
+    company: "District Institute of Recreation and Sport — IDRD",
+    place: "Bogotá, Colombia",
+    current: true,
+    highlights: [
+      "End-to-end front-end and back-end web development with Nest.js, PostgreSQL, and Docker.",
+      "Relational database design and implementation.",
+      "API integration, testing, and technical/functional documentation using Swagger.",
+      "Project management, version control, and continuous deployment with Azure DevOps using Scrum.",
+      "Technical project advisory and end-user support.",
+    ],
+  },
+  {
+    period: "2025",
+    role: "Full Stack Developer",
+    company: "TESTLAB S.A.S.",
+    place: "Bogotá, Colombia",
+    highlights: [
+      "Front-end and back-end web development.",
+      "Database design and implementation.",
+      "Technical and functional documentation creation.",
+      "Support for tech projects and end-users.",
+      "Involvement across all software lifecycle phases.",
+    ],
+  },
+  {
+    period: "Apr 2022 — Mar 2025",
+    role: "Front End Developer",
+    company: "District Institute of the Arts — Idartes",
+    place: "Bogotá, Colombia",
+    highlights: [
+      "Development and maintenance of front-end modules using Three.js for interactive 3D graphics.",
+      "Version management using Bitbucket collaborating under Scrum methodology.",
+      "Continuous focus on user experience optimization and web performance.",
+    ],
+  },
+  {
+    period: "Nov 2024 — Mar 2025",
+    role: "Front End Developer",
+    company: "Neural Tech",
+    place: "Bogotá, Colombia",
+    highlights: [
+      "Intuitive UX interface design and responsive front-end systems.",
+      "Back-end API integration for seamless data communication.",
+      "Performance optimization and proactive technical issue resolution.",
+    ],
+  },
+  {
+    period: "Mar 2024 — Nov 2024",
+    role: "Full Stack Developer",
+    company: "Serviware SAS",
+    place: "Tunja, Colombia",
+    highlights: [
+      "Scalable applications with Vue.js & Angular.js (front), Symfony, Java & TypeScript (back).",
+      "PL/SQL and MySQL database management: integrity and query optimization.",
+      "Deployment of solutions on Linux servers to maximize performance.",
+    ],
+  },
+  {
+    period: "Feb 2023 — Jan 2024",
+    role: "Full Stack Web Developer",
+    company: "Stark Lower SAS",
+    place: "Bogotá, Colombia",
+    highlights: [
+      "Python API development for back-end business logic.",
+      "Dynamic interfaces with React.js and state management with Redux.",
+      "Optimal performance and intuitive user interactions.",
+    ],
+  },
+];
+
+export function getExperience(lang: Language): ExperienceItem[] {
+  return lang === "en" ? experienceEN : experienceES;
+}
+
 /* ── Formación ──────────────────────────────────────────── */
 export interface EducationItem {
   period: string;
@@ -102,7 +181,7 @@ export interface EducationItem {
   note: string;
 }
 
-export const education: EducationItem[] = [
+const educationES: EducationItem[] = [
   {
     period: "2023 — En curso (7° Semestre)",
     title: "Ingeniería de Software",
@@ -119,6 +198,27 @@ export const education: EducationItem[] = [
   },
 ];
 
+const educationEN: EducationItem[] = [
+  {
+    period: "2023 — Present (7th Semester)",
+    title: "Software Engineering",
+    institution: "Corporación Universitaria Tecnológica del Oriente",
+    place: "Colombia",
+    note: "Professional education focused on full software lifecycle, design patterns, architecture, and agile methodologies.",
+  },
+  {
+    period: "Graduated · Dec 2020",
+    title: "Technologist in Information Systems Analysis and Development",
+    institution: "SENA",
+    place: "Ibagué, Colombia",
+    note: "Technical background in analysis, design, and development of information systems: databases, programming, and SDLC.",
+  },
+];
+
+export function getEducation(lang: Language): EducationItem[] {
+  return lang === "en" ? educationEN : educationES;
+}
+
 /* ── Servicios ──────────────────────────────────────────── */
 export interface Service {
   id: string;
@@ -128,7 +228,7 @@ export interface Service {
   tags: string[];
 }
 
-export const services: Service[] = [
+const servicesES: Service[] = [
   {
     id: "fullstack",
     number: "01",
@@ -171,6 +271,53 @@ export const services: Service[] = [
   },
 ];
 
+const servicesEN: Service[] = [
+  {
+    id: "fullstack",
+    number: "01",
+    title: "Full Stack Web Development",
+    description:
+      "End-to-end application development: dynamic UIs with React, Vue, Angular, or Three.js and robust back-ends with Nest.js, Symfony, Java, TypeScript, or Python.",
+    tags: ["Nest.js", "React.js", "Three.js", "TypeScript", "Symfony", "Java"],
+  },
+  {
+    id: "datos",
+    number: "02",
+    title: "Databases & Architecture",
+    description:
+      "Design and implementation of PostgreSQL, MySQL, and PL/SQL databases with a focus on integrity, normalization, and query optimization.",
+    tags: ["PostgreSQL", "MySQL", "PL/SQL", "SQL"],
+  },
+  {
+    id: "apis",
+    number: "03",
+    title: "APIs & Integrations",
+    description:
+      "API development and documentation using Swagger, ensuring agile integration and seamless data communication with the front-end.",
+    tags: ["Swagger", "REST", "TypeScript", "Python"],
+  },
+  {
+    id: "deploy",
+    number: "04",
+    title: "Deployment & Infrastructure",
+    description:
+      "Docker containers and deployments via Azure DevOps on cloud and local servers to guarantee stability and CI/CD.",
+    tags: ["Docker", "Azure DevOps", "Bitbucket", "Linux"],
+  },
+  {
+    id: "docs",
+    number: "05",
+    title: "Methodologies & Support",
+    description:
+      "Project management using Scrum agile methodology, technical and functional documentation, user support, and software lifecycle maintenance.",
+    tags: ["Scrum", "SDLC", "Azure DevOps", "Bitbucket"],
+  },
+];
+
+export function getServices(lang: Language): Service[] {
+  return lang === "en" ? servicesEN : servicesES;
+}
+
 /* ── Stack ──────────────────────────────────────────────── */
 export interface SkillGroup {
   id: string;
@@ -180,7 +327,7 @@ export interface SkillGroup {
   skills: string[];
 }
 
-export const skillGroups: SkillGroup[] = [
+const skillGroupsES: SkillGroup[] = [
   {
     id: "lenguajes",
     category: "Lenguajes",
@@ -203,6 +350,34 @@ export const skillGroups: SkillGroup[] = [
     skills: ["PostgreSQL", "MySQL", "Docker", "Azure DevOps", "Bitbucket", "Swagger", "Scrum", "Linux"],
   },
 ];
+
+const skillGroupsEN: SkillGroup[] = [
+  {
+    id: "lenguajes",
+    category: "Languages",
+    note: "The core foundation",
+    icon: "code",
+    skills: ["SQL", "PL/SQL", "Python", "PHP", "TypeScript", "JavaScript"],
+  },
+  {
+    id: "frameworks",
+    category: "Frameworks & Libraries",
+    note: "Front and back",
+    icon: "layers",
+    skills: ["Nest.js", "Three.js", "Symfony", "React.js", "Angular.js", "Vue.js", "Redux", "Java"],
+  },
+  {
+    id: "herramientas",
+    category: "Tools & Infrastructure",
+    note: "Daily toolkit",
+    icon: "tools",
+    skills: ["PostgreSQL", "MySQL", "Docker", "Azure DevOps", "Bitbucket", "Swagger", "Scrum", "Linux"],
+  },
+];
+
+export function getSkillGroups(lang: Language): SkillGroup[] {
+  return lang === "en" ? skillGroupsEN : skillGroupsES;
+}
 
 export const toolbox = [
   "SQL",
@@ -230,12 +405,22 @@ export const toolbox = [
 ];
 
 /* ── Cifras ─────────────────────────────────────────────── */
-export const counters = [
-  { value: 3, suffix: "+", label: "años de experiencia" },
-  { value: 6, suffix: "", label: "empresas & equipos" },
-  { value: 16, suffix: "+", label: "tecnologías en el stack" },
-  { value: 2, suffix: "", label: "programas de formación" },
-];
+export function getCounters(lang: Language) {
+  if (lang === "en") {
+    return [
+      { value: 3, suffix: "+", label: "years of experience" },
+      { value: 6, suffix: "", label: "companies & teams" },
+      { value: 16, suffix: "+", label: "technologies in stack" },
+      { value: 2, suffix: "", label: "training programs" },
+    ];
+  }
+  return [
+    { value: 3, suffix: "+", label: "años de experiencia" },
+    { value: 6, suffix: "", label: "empresas & equipos" },
+    { value: 16, suffix: "+", label: "tecnologías en el stack" },
+    { value: 2, suffix: "", label: "programas de formación" },
+  ];
+}
 
 /* ── Marquee ────────────────────────────────────────────── */
 export const marqueeItems = [
@@ -262,43 +447,55 @@ export const marqueeItems = [
 ];
 
 /* ── Navegación ─────────────────────────────────────────── */
-export const navLinks = [
-  { label: "Experiencia", href: "#experiencia" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Stack", href: "#stack" },
-  { label: "Sobre mí", href: "#sobre" },
-];
+export function getNavLinks(lang: Language) {
+  if (lang === "en") {
+    return [
+      { label: "Experience", href: "#experiencia" },
+      { label: "Services", href: "#servicios" },
+      { label: "Stack", href: "#stack" },
+      { label: "About me", href: "#sobre" },
+    ];
+  }
+  return [
+    { label: "Experiencia", href: "#experiencia" },
+    { label: "Servicios", href: "#servicios" },
+    { label: "Stack", href: "#stack" },
+    { label: "Sobre mí", href: "#sobre" },
+  ];
+}
 
 /* ── Contacto / redes ───────────────────────────────────── */
-export const socials = [
-  {
-    label: "LinkedIn",
-    handle: linkedinHandle,
-    href: linkedinUrl,
-    icon: "linkedin" as const,
-    external: true,
-  },
-  {
-    label: "Correo",
-    handle: email,
-    href: `mailto:${email}`,
-    icon: "mail" as const,
-    external: false,
-  },
-  {
-    label: "Teléfono",
-    handle: phone,
-    href: phoneHref,
-    icon: "phone" as const,
-    external: false,
-  },
-  {
-    label: "WhatsApp",
-    handle: "Escríbeme directo",
-    href: whatsappHref,
-    icon: "whatsapp" as const,
-    external: true,
-  },
-];
+export function getSocials(lang: Language) {
+  return [
+    {
+      label: "LinkedIn",
+      handle: linkedinHandle,
+      href: linkedinUrl,
+      icon: "linkedin" as const,
+      external: true,
+    },
+    {
+      label: lang === "en" ? "Email" : "Correo",
+      handle: email,
+      href: `mailto:${email}`,
+      icon: "mail" as const,
+      external: false,
+    },
+    {
+      label: lang === "en" ? "Phone" : "Teléfono",
+      handle: phone,
+      href: phoneHref,
+      icon: "phone" as const,
+      external: false,
+    },
+    {
+      label: "WhatsApp",
+      handle: lang === "en" ? "Message direct" : "Escríbeme directo",
+      href: whatsappHref,
+      icon: "whatsapp" as const,
+      external: true,
+    },
+  ];
+}
 
 export const portraitImage = portraitImg;

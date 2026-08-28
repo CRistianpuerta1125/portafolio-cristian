@@ -1,6 +1,8 @@
-import { counters, portraitImage, toolbox } from "../lib/data";
+import { getCounters, portraitImage, toolbox } from "../lib/data";
 import { Reveal, useCountUp, useInView } from "../lib/motion";
 import { Spark } from "../lib/icons";
+import { useLanguage } from "../lib/LanguageContext";
+import { getTranslation } from "../lib/translations";
 
 function Counter({
   value,
@@ -29,6 +31,9 @@ function Counter({
 
 export default function About() {
   const { ref, inView } = useInView<HTMLDivElement>(0.3);
+  const { lang } = useLanguage();
+  const t = getTranslation(lang).about;
+  const counters = getCounters(lang);
 
   return (
     <section
@@ -54,12 +59,12 @@ export default function About() {
                 <span>Tunja — GMT−5</span>
                 <span className="flex items-center gap-1.5 text-amber">
                   <Spark className="h-3 w-3" />
-                  archivo personal
+                  {t.personalArchive}
                 </span>
               </div>
             </div>
             <div className="animate-floaty absolute -right-5 -top-6 border border-line bg-card px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-amber">
-              desde 2022
+              {t.sinceBadge}
             </div>
           </div>
         </Reveal>
@@ -68,35 +73,19 @@ export default function About() {
         <div>
           <Reveal variant="mask">
             <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
-              (05) — Sobre mí
+              {t.sectionNum}
             </span>
           </Reveal>
           <Reveal variant="mask" delay={120}>
             <h2 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-mist sm:text-6xl">
-              Código con <span className="text-stroke">propósito</span>
+              {t.title}<span className="text-stroke">{t.titleHighlight}</span>
             </h2>
           </Reveal>
 
           <Reveal delay={200}>
             <div className="mt-7 space-y-5 leading-relaxed text-fog">
-              <p>
-                Soy{" "}
-                <strong className="font-semibold text-mist">
-                  Cristian Damián Calderón Puerta
-                </strong>
-                , desarrollador Full Stack desde Tunja, Boyacá. Me especializo
-                en construir soluciones innovadoras y eficientes: del diseño de
-                la base de datos al despliegue en servidores Linux.
-              </p>
-              <p>
-                He trabajado con el sector público y privado —recreación y
-                deporte, artes, tecnología y servicios— participando en todas
-                las fases del ciclo de desarrollo. Mi compromiso:{" "}
-                <em className="font-display font-bold not-italic text-mist">
-                  superar las expectativas del usuario
-                </em>{" "}
-                a través de proyectos ambiciosos.
-              </p>
+              <p>{t.bio1}</p>
+              <p>{t.bio2}</p>
             </div>
           </Reveal>
 
@@ -111,7 +100,7 @@ export default function About() {
 
           <Reveal delay={150}>
             <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.3em] text-fog">
-              Caja de herramientas
+              {t.toolboxTitle}
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {toolbox.map((tool) => (

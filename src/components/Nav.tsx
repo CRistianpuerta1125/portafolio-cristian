@@ -1,11 +1,16 @@
 import { useState } from "react";
-import { navLinks } from "../lib/data";
+import { getNavLinks } from "../lib/data";
 import { useScrollProgress } from "../lib/motion";
 import { Close, Menu, Spark } from "../lib/icons";
+import { useLanguage } from "../lib/LanguageContext";
+import { getTranslation } from "../lib/translations";
 
 export default function Nav() {
   const progress = useScrollProgress();
   const [open, setOpen] = useState(false);
+  const { lang, setLang } = useLanguage();
+  const t = getTranslation(lang).nav;
+  const navLinks = getNavLinks(lang);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
@@ -24,11 +29,11 @@ export default function Nav() {
             className="group flex items-baseline gap-1 font-display text-xl font-bold tracking-tight text-mist"
           >
             CC
-            <span className="text-amber transition-transform duration-300 group-hover:rotate-90 inline-block">
-              <Spark className="w-3.5 h-3.5" />
+            <span className="inline-block text-amber transition-transform duration-300 group-hover:rotate-90">
+              <Spark className="h-3.5 w-3.5" />
             </span>
             <span className="ml-2 hidden font-mono text-[10px] uppercase tracking-[0.25em] text-fog sm:inline">
-              full stack — 26
+              {t.tag}
             </span>
           </a>
 
@@ -45,6 +50,31 @@ export default function Nav() {
           </div>
 
           <div className="flex items-center gap-4">
+            {/* Toggle de Idioma */}
+            <div className="flex items-center rounded-sm border border-line bg-card/60 p-1 font-mono text-[10px] uppercase tracking-wider text-fog">
+              <button
+                onClick={() => setLang("es")}
+                className={`px-2 py-0.5 transition-colors ${
+                  lang === "es"
+                    ? "bg-amber font-bold text-ink"
+                    : "hover:text-mist"
+                }`}
+              >
+                ES
+              </button>
+              <span className="px-0.5 text-line">|</span>
+              <button
+                onClick={() => setLang("en")}
+                className={`px-2 py-0.5 transition-colors ${
+                  lang === "en"
+                    ? "bg-amber font-bold text-ink"
+                    : "hover:text-mist"
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
             <a
               href="#contacto"
               className="group hidden items-center gap-2 border border-line bg-card px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 hover:border-amber hover:bg-amber hover:text-ink sm:flex"
@@ -53,12 +83,12 @@ export default function Nav() {
                 <span className="absolute inline-flex h-full w-full animate-ping bg-amber opacity-60 group-hover:bg-ink" />
                 <span className="relative inline-flex h-2 w-2 bg-amber group-hover:bg-ink" />
               </span>
-              Disponible
+              {t.available}
             </a>
 
             <button
               onClick={() => setOpen(!open)}
-              aria-label={open ? "Cerrar menú" : "Abrir menú"}
+              aria-label={open ? t.closeMenu : t.openMenu}
               aria-expanded={open}
               className="flex h-10 w-10 items-center justify-center border border-line text-mist transition-colors hover:border-amber hover:text-amber md:hidden"
             >
@@ -90,7 +120,7 @@ export default function Nav() {
                 onClick={() => setOpen(false)}
                 className="mt-4 bg-amber px-4 py-3 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-ink"
               >
-                Hablemos →
+                {t.talk}
               </a>
             </div>
           </div>

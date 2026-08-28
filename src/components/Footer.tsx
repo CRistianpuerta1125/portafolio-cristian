@@ -1,4 +1,4 @@
-import { email, phone, socials } from "../lib/data";
+import { email, phone, getSocials } from "../lib/data";
 import { Reveal, useClock } from "../lib/motion";
 import {
   ArrowUp,
@@ -10,6 +10,7 @@ import {
   Spark,
   WhatsApp,
 } from "../lib/icons";
+import { useLanguage } from "../lib/LanguageContext";
 
 const iconMap = {
   linkedin: LinkedIn,
@@ -20,6 +21,9 @@ const iconMap = {
 
 export default function Footer() {
   const time = useClock();
+  const { lang } = useLanguage();
+  const isEn = lang === "en";
+  const socials = getSocials(lang);
 
   const backToTop = () => {
     window.scrollTo({ top: 0 });
@@ -35,17 +39,23 @@ export default function Footer() {
         <div className="text-center">
           <Reveal variant="mask">
             <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
-              (06) — ¿Tienes un proyecto en mente?
+              {isEn
+                ? "(06) — Have a project in mind?"
+                : "(06) — ¿Tienes un proyecto en mente?"}
             </span>
           </Reveal>
           <Reveal variant="mask" delay={140}>
             <a
-              href={`mailto:${email}?subject=Proyecto nuevo — hablemos`}
+              href={`mailto:${email}?subject=${
+                isEn
+                  ? "New project — let's talk"
+                  : "Proyecto nuevo — hablemos"
+              }`}
               className="group mt-6 inline-block"
-              aria-label="Escríbeme un correo"
+              aria-label={isEn ? "Send me an email" : "Escríbeme un correo"}
             >
               <span className="fill-on-hover block font-display text-[clamp(3.4rem,14vw,11rem)] font-extrabold leading-[0.9] tracking-tight">
-                HABLEMOS
+                {isEn ? "LET'S TALK" : "HABLEMOS"}
               </span>
             </a>
           </Reveal>
@@ -71,8 +81,9 @@ export default function Footer() {
           </Reveal>
           <Reveal delay={320}>
             <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-fog">
-              Respondo rápido, por correo o WhatsApp. Cuéntame tu idea y la
-              convertimos en un proyecto — de la base de datos al deploy.
+              {isEn
+                ? "I respond quickly, via email or WhatsApp. Share your idea and let's make it a reality — from database to deployment."
+                : "Respondo rápido, por correo o WhatsApp. Cuéntame tu idea y la convertimos en un proyecto — de la base de datos al deploy."}
             </p>
           </Reveal>
         </div>
@@ -111,10 +122,12 @@ export default function Footer() {
         <div className="mt-12 flex flex-col items-center justify-between gap-5 border-t border-line/60 pt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-fog sm:flex-row">
           <span className="flex items-center gap-2">
             <Spark className="h-3 w-3 text-amber" />
-            © 2026 Cristian Calderón — Hecho en Colombia · programado a mano
+            {isEn
+              ? "© 2026 Cristian Calderón — Made in Colombia · hand coded"
+              : "© 2026 Cristian Calderón — Hecho en Colombia · programado a mano"}
           </span>
           <span className="flex items-center gap-2">
-            <ColombiaFlag className="w-5 h-3.5 border border-line/50" />
+            <ColombiaFlag className="h-3.5 w-5 border border-line/50" />
             Tunja · COL
             <span className="animate-blink inline-block h-1.5 w-1.5 bg-amber" />
             {time} h
@@ -123,7 +136,7 @@ export default function Footer() {
             onClick={backToTop}
             className="group flex items-center gap-2 border border-line px-4 py-2.5 text-mist transition-colors duration-300 hover:border-amber hover:text-amber"
           >
-            Volver arriba
+            {isEn ? "Back to top" : "Volver arriba"}
             <ArrowUp className="h-3.5 w-3.5 transition-transform duration-300 group-hover:-translate-y-1" />
           </button>
         </div>

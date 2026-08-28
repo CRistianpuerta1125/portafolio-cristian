@@ -1,9 +1,14 @@
 import { useState } from "react";
-import { services, email } from "../lib/data";
+import { getServices, email } from "../lib/data";
 import { Reveal } from "../lib/motion";
 import { ArrowUpRight, Plus } from "../lib/icons";
+import { useLanguage } from "../lib/LanguageContext";
+import { getTranslation } from "../lib/translations";
 
 export default function Services() {
+  const { lang } = useLanguage();
+  const t = getTranslation(lang).services;
+  const services = getServices(lang);
   const [openId, setOpenId] = useState<string | null>(services[0].id);
 
   return (
@@ -16,20 +21,17 @@ export default function Services() {
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal variant="mask">
             <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
-              (03) — Servicios
+              {t.sectionNum}
             </span>
           </Reveal>
           <Reveal variant="mask" delay={120}>
             <h2 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-mist sm:text-6xl">
-              Lo que puedo hacer por{" "}
-              <span className="text-amber">tu equipo</span>
+              {t.title}<span className="text-amber">{t.titleHighlight}</span>
             </h2>
           </Reveal>
           <Reveal delay={220}>
             <p className="mt-6 max-w-sm leading-relaxed text-fog">
-              Trabajo de punta a punta: del requerimiento y el modelado de
-              datos hasta el deploy y la documentación. Un solo responsable,
-              de la idea a producción.
+              {t.description}
             </p>
           </Reveal>
           <Reveal delay={300}>
@@ -37,7 +39,7 @@ export default function Services() {
               href={`mailto:${email}?subject=Proyecto nuevo`}
               className="group mt-8 inline-flex items-center gap-2 border border-line px-5 py-3 font-mono text-[11px] uppercase tracking-[0.22em] text-mist transition-colors duration-300 hover:border-amber hover:text-amber"
             >
-              Cuéntame tu proyecto
+              {t.cta}
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </a>
           </Reveal>

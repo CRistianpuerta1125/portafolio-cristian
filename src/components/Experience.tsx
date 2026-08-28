@@ -1,8 +1,15 @@
-import { education, experience, linkedinUrl } from "../lib/data";
+import { getEducation, getExperience, linkedinUrl } from "../lib/data";
 import { Reveal } from "../lib/motion";
 import { ArrowUpRight, Spark } from "../lib/icons";
+import { useLanguage } from "../lib/LanguageContext";
+import { getTranslation } from "../lib/translations";
 
 export default function Experience() {
+  const { lang } = useLanguage();
+  const t = getTranslation(lang).experience;
+  const experience = getExperience(lang);
+  const education = getEducation(lang);
+
   return (
     <section
       id="experiencia"
@@ -14,19 +21,17 @@ export default function Experience() {
           <div className="lg:sticky lg:top-28 lg:self-start">
             <Reveal variant="mask">
               <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
-                (01) — Trayectoria
+                {t.sectionNum}
               </span>
             </Reveal>
             <Reveal variant="mask" delay={120}>
               <h2 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-mist sm:text-6xl">
-                Experiencia <span className="text-stroke">real</span>
+                {t.title}<span className="text-stroke">{t.titleHighlight}</span>
               </h2>
             </Reveal>
             <Reveal delay={200}>
               <p className="mt-6 max-w-sm leading-relaxed text-fog">
-                Del sector público al privado: recreación y deporte, artes,
-                tecnología y servicios. Seis equipos, tres ciudades — Bogotá,
-                Tunja y Ibagué en la formación.
+                {t.description}
               </p>
             </Reveal>
             <Reveal delay={260}>
@@ -36,20 +41,20 @@ export default function Experience() {
                 rel="noreferrer"
                 className="group mt-8 inline-flex items-center gap-2 border border-line px-5 py-3 font-mono text-[11px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 hover:border-amber hover:text-amber"
               >
-                Perfil de LinkedIn
+                {t.linkedinBtn}
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </a>
             </Reveal>
             <Reveal delay={320}>
               <div className="mt-10 space-y-2 border-t border-line pt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-fog">
                 <p>
-                  <span className="text-amber">06</span> empresas & equipos
+                  <span className="text-amber">06</span> {t.companiesCount}
                 </p>
                 <p>
-                  <span className="text-amber">2022</span> — actualidad
+                  <span className="text-amber">{t.periodCurrent}</span>
                 </p>
                 <p>
-                  <span className="text-amber">SDLC</span> completo, siempre
+                  <span className="text-amber">{t.sdlcText}</span>
                 </p>
               </div>
             </Reveal>
@@ -65,7 +70,7 @@ export default function Experience() {
                       {item.period}
                       {item.current && (
                         <span className="border border-amber/60 px-2 py-0.5 text-[9px] tracking-[0.18em]">
-                          ACTUAL
+                          {t.currentBadge}
                         </span>
                       )}
                     </p>
@@ -102,19 +107,18 @@ export default function Experience() {
             <div>
               <Reveal variant="mask">
                 <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
-                  (02) — Formación
+                  {t.eduSectionNum}
                 </span>
               </Reveal>
               <Reveal variant="mask" delay={120}>
                 <h3 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-mist sm:text-5xl">
-                  Donde me formé
+                  {t.eduTitle}
                 </h3>
               </Reveal>
             </div>
             <Reveal delay={200}>
               <p className="max-w-xs pb-2 text-sm leading-relaxed text-fog">
-                Técnico primero, ingeniero en camino: la base práctica del SENA
-                y la especialización de la UNAD.
+                {t.eduDescription}
               </p>
             </Reveal>
           </div>

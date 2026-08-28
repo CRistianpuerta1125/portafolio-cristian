@@ -1,6 +1,8 @@
-import { skillGroups } from "../lib/data";
+import { getSkillGroups } from "../lib/data";
 import { Reveal } from "../lib/motion";
 import { CodeGlyph, LayersGlyph, ToolsGlyph } from "../lib/icons";
+import { useLanguage } from "../lib/LanguageContext";
+import { getTranslation } from "../lib/translations";
 
 const iconMap = {
   code: CodeGlyph,
@@ -9,6 +11,10 @@ const iconMap = {
 };
 
 export default function Stack() {
+  const { lang } = useLanguage();
+  const t = getTranslation(lang).stack;
+  const skillGroups = getSkillGroups(lang);
+
   return (
     <section id="stack" className="relative scroll-mt-20 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
@@ -16,20 +22,18 @@ export default function Stack() {
           <div>
             <Reveal variant="mask">
               <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
-                (04) — Stack tecnológico
+                {t.sectionNum}
               </span>
             </Reveal>
             <Reveal variant="mask" delay={120}>
               <h2 className="mt-4 font-display text-5xl font-extrabold tracking-tight text-mist sm:text-7xl">
-                Tecnologías <span className="text-stroke">de cabecera</span>
+                {t.title}<span className="text-stroke">{t.titleHighlight}</span>
               </h2>
             </Reveal>
           </div>
           <Reveal delay={200}>
             <p className="max-w-sm pb-2 text-sm leading-relaxed text-fog">
-              Lo que uso a diario, agrupado como en mi flujo de trabajo:
-              primero el lenguaje, luego el framework y al final la
-              herramienta que sostiene todo.
+              {t.description}
             </p>
           </Reveal>
         </div>
@@ -82,8 +86,7 @@ export default function Stack() {
 
         <Reveal delay={150}>
           <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-fog">
-            <span className="text-amber">✳</span> Aprendizaje continuo —
-            Ingeniería de Sistemas en la UNAD, en curso
+            <span className="text-amber">✳</span> {t.learningNote}
           </p>
         </Reveal>
       </div>
