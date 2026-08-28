@@ -40,7 +40,7 @@ export default function About() {
       id="sobre"
       className="relative scroll-mt-20 overflow-hidden border-t border-line/60 bg-deep py-24 sm:py-32"
     >
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
+      <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
         {/* retrato */}
         <Reveal>
           <div className="relative mx-auto max-w-md">
@@ -77,7 +77,7 @@ export default function About() {
             </span>
           </Reveal>
           <Reveal variant="mask" delay={120}>
-            <h2 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-mist sm:text-6xl">
+            <h2 className="mt-4 font-display text-3xl min-[400px]:text-4xl sm:text-6xl font-extrabold leading-[0.95] tracking-tight text-mist">
               {t.title}<span className="text-stroke">{t.titleHighlight}</span>
             </h2>
           </Reveal>

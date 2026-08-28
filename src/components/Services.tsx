@@ -14,9 +14,9 @@ export default function Services() {
   return (
     <section
       id="servicios"
-      className="relative scroll-mt-20 border-t border-line/60 bg-deep py-24 sm:py-32"
+      className="relative scroll-mt-20 overflow-hidden border-t border-line/60 bg-deep py-20 sm:py-32"
     >
-      <div className="mx-auto grid max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
+      <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-8 lg:grid-cols-[1fr_1.5fr] lg:gap-20">
         {/* columna sticky */}
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal variant="mask">
@@ -25,7 +25,7 @@ export default function Services() {
             </span>
           </Reveal>
           <Reveal variant="mask" delay={120}>
-            <h2 className="mt-4 font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-mist sm:text-6xl">
+            <h2 className="mt-4 font-display text-3xl min-[400px]:text-4xl sm:text-6xl font-extrabold leading-[0.95] tracking-tight text-mist">
               {t.title}<span className="text-amber">{t.titleHighlight}</span>
             </h2>
           </Reveal>

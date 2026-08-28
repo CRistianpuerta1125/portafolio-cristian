@@ -16,8 +16,8 @@ export default function Stack() {
   const skillGroups = getSkillGroups(lang);
 
   return (
-    <section id="stack" className="relative scroll-mt-20 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="stack" className="relative scroll-mt-20 overflow-hidden py-20 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <div className="mb-14 flex flex-wrap items-end justify-between gap-6 sm:mb-20">
           <div>
             <Reveal variant="mask">
@@ -26,7 +26,7 @@ export default function Stack() {
               </span>
             </Reveal>
             <Reveal variant="mask" delay={120}>
-              <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-mist sm:text-7xl">
+              <h2 className="mt-4 font-display text-3xl min-[400px]:text-4xl sm:text-7xl font-extrabold tracking-tight text-mist">
                 {t.title}<span className="text-stroke">{t.titleHighlight}</span>
               </h2>
             </Reveal>
