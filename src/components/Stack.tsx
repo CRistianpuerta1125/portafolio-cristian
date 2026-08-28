@@ -26,7 +26,7 @@ export default function Stack() {
               </span>
             </Reveal>
             <Reveal variant="mask" delay={120}>
-              <h2 className="mt-4 font-display text-5xl font-extrabold tracking-tight text-mist sm:text-7xl">
+              <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight text-mist sm:text-7xl">
                 {t.title}<span className="text-stroke">{t.titleHighlight}</span>
               </h2>
             </Reveal>

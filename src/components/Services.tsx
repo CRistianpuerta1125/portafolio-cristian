@@ -81,7 +81,7 @@ export default function Services() {
                     style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
                   >
                     <div className="min-h-0 overflow-hidden">
-                      <div className="pb-7 pl-10 pr-4 sm:pl-16 sm:pr-16">
+                      <div className="pb-7 pl-4 pr-2 sm:pl-16 sm:pr-16">
                         <p className="max-w-xl leading-relaxed text-fog">
                           {service.description}
                         </p>

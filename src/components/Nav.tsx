@@ -22,11 +22,12 @@ export default function Nav() {
         />
       </div>
 
-      <nav className="border-b border-line/60 bg-ink/85 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
+      <nav className="border-b border-line/60 bg-ink/90 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-8">
+          {/* Logo */}
           <a
             href="#inicio"
-            className="group flex items-baseline gap-1 font-display text-xl font-bold tracking-tight text-mist"
+            className="group flex shrink-0 items-baseline gap-1 font-display text-xl font-bold tracking-tight text-mist"
           >
             CC
             <span className="inline-block text-amber transition-transform duration-300 group-hover:rotate-90">
@@ -37,7 +38,8 @@ export default function Nav() {
             </span>
           </a>
 
-          <div className="hidden items-center gap-8 md:flex">
+          {/* Links de navegación escritorio (visibles desde LG) */}
+          <div className="hidden items-center gap-6 lg:flex xl:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -49,10 +51,12 @@ export default function Nav() {
             ))}
           </div>
 
+          {/* Acciones derechas (Idiomas + Contacto + Hamburguesa) */}
           <div className="flex shrink-0 items-center gap-2 sm:gap-4">
             {/* Toggle de Idioma */}
-            <div className="flex shrink-0 items-center rounded-sm border border-line bg-card/60 p-1 font-mono text-[10px] uppercase tracking-wider text-fog">
+            <div className="flex shrink-0 items-center rounded-sm border border-line bg-card/80 p-1 font-mono text-[10px] uppercase tracking-wider text-fog">
               <button
+                type="button"
                 onClick={() => setLang("es")}
                 className={`px-2 py-0.5 transition-colors ${
                   lang === "es"
@@ -64,6 +68,7 @@ export default function Nav() {
               </button>
               <span className="px-0.5 text-line">|</span>
               <button
+                type="button"
                 onClick={() => setLang("en")}
                 className={`px-2 py-0.5 transition-colors ${
                   lang === "en"
@@ -75,9 +80,10 @@ export default function Nav() {
               </button>
             </div>
 
+            {/* Botón disponible (pantallas medianas en adelante) */}
             <a
               href="#contacto"
-              className="group hidden items-center gap-2 border border-line bg-card px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 hover:border-amber hover:bg-amber hover:text-ink sm:flex"
+              className="group hidden items-center gap-2 border border-line bg-card px-3.5 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-mist transition-colors duration-300 hover:border-amber hover:bg-amber hover:text-ink md:flex"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping bg-amber opacity-60 group-hover:bg-ink" />
@@ -86,24 +92,30 @@ export default function Nav() {
               {t.available}
             </a>
 
+            {/* Botón menú hamburguesa (visible en pantallas < LG) */}
             <button
+              type="button"
               onClick={() => setOpen(!open)}
               aria-label={open ? t.closeMenu : t.openMenu}
               aria-expanded={open}
-              className="flex h-10 w-10 shrink-0 items-center justify-center border border-line text-mist transition-colors hover:border-amber hover:text-amber md:hidden"
+              className="flex h-10 w-10 shrink-0 items-center justify-center border border-line bg-card/80 text-mist transition-colors hover:border-amber hover:text-amber lg:hidden"
             >
-              {open ? <Close /> : <Menu />}
+              {open ? (
+                <Close className="h-5 w-5 text-mist" />
+              ) : (
+                <Menu className="h-5 w-5 text-mist" />
+              )}
             </button>
           </div>
         </div>
 
-        {/* menú móvil */}
+        {/* menú desplegable móvil / tablet */}
         <div
-          className="grid overflow-hidden transition-[grid-template-rows] duration-400 md:hidden"
+          className="grid overflow-hidden transition-[grid-template-rows] duration-400 lg:hidden"
           style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
         >
           <div className="min-h-0 overflow-hidden">
-            <div className="flex flex-col border-t border-line/60 px-5 py-4">
+            <div className="flex flex-col border-t border-line/60 bg-ink px-5 py-4">
               {navLinks.map((link, i) => (
                 <a
                   key={link.href}

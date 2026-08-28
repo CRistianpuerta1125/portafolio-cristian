@@ -54,7 +54,7 @@ export default function Footer() {
               className="group mt-6 inline-block"
               aria-label={isEn ? "Send me an email" : "Escríbeme un correo"}
             >
-              <span className="fill-on-hover block font-display text-[clamp(3.4rem,14vw,11rem)] font-extrabold leading-[0.9] tracking-tight">
+              <span className="fill-on-hover block font-display text-[clamp(2.4rem,12vw,11rem)] font-extrabold leading-[0.9] tracking-tight">
                 {isEn ? "LET'S TALK" : "HABLEMOS"}
               </span>
             </a>

@@ -48,23 +48,23 @@ export default function Hero() {
         </div>
 
         {/* masthead tipográfico */}
-        <div className="mt-10 flex flex-1 flex-col justify-center sm:mt-6">
-          <p className="mb-4 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.3em] text-fog">
-            <span className="inline-block h-px w-10 bg-amber" />
+        <div className="mt-8 flex flex-1 flex-col justify-center sm:mt-6">
+          <p className="mb-4 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-fog sm:gap-3 sm:text-[11px] sm:tracking-[0.3em]">
+            <span className="inline-block h-px w-6 bg-amber sm:w-10" />
             {isEn
               ? "Full Stack Developer — from database to deployment"
               : "Desarrollador Full Stack — de la base de datos al deploy"}
           </p>
 
           <h1 className="font-display font-extrabold leading-[0.88] tracking-tight">
-            <span className="block text-[clamp(2.9rem,11.5vw,9.5rem)] text-mist">
+            <span className="block text-[clamp(2.2rem,11.5vw,9.5rem)] text-mist">
               {name}
             </span>
-            <span className="group block cursor-default text-[clamp(2.9rem,11.5vw,9.5rem)]">
+            <span className="group block cursor-default text-[clamp(2.2rem,11.5vw,9.5rem)]">
               <span className="text-stroke transition-colors duration-500 group-hover:text-amber group-hover:[-webkit-text-stroke-color:transparent]">
                 {surname}
               </span>
-              <span className="align-top font-mono text-[clamp(0.8rem,1.6vw,1.1rem)] font-normal tracking-normal text-amber">
+              <span className="align-top font-mono text-[clamp(0.75rem,1.6vw,1.1rem)] font-normal tracking-normal text-amber">
                 ®
               </span>
             </span>

@@ -63,7 +63,7 @@ export default function About() {
                 </span>
               </div>
             </div>
-            <div className="animate-floaty absolute -right-5 -top-6 border border-line bg-card px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-amber">
+            <div className="animate-floaty absolute right-0 -top-6 border border-line bg-card px-3 py-2 font-mono text-[10px] uppercase tracking-[0.2em] text-amber sm:-right-5">
               {t.sinceBadge}
             </div>
           </div>
