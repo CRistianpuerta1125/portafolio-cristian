@@ -27,11 +27,11 @@ export const experience: ExperienceItem[] = [
     place: "Bogotá, Colombia",
     current: true,
     highlights: [
-      "Desarrollo web front-end y back-end de punta a punta.",
-      "Diseño e implementación de bases de datos.",
-      "Creación de documentación técnica y funcional.",
+      "Desarrollo web front-end y back-end de punta a punta con Nest.js, PostgreSQL y Docker.",
+      "Diseño e implementación de bases de datos relacionales.",
+      "Integración, pruebas y documentación técnica y funcional utilizando Swagger.",
+      "Gestión de proyectos, control de versiones y despliegue continuo con Azure DevOps bajo metodologías ágiles (Scrum).",
       "Acompañamiento a proyectos tecnológicos y soporte a usuarios.",
-      "Participación en las distintas fases del ciclo de vida del software.",
     ],
   },
   {
@@ -53,8 +53,9 @@ export const experience: ExperienceItem[] = [
     company: "Instituto Distrital de las Artes — Idartes",
     place: "Bogotá, Colombia",
     highlights: [
-      "Desarrollo y mantenimiento de módulos front-end.",
-      "Foco permanente en la optimización de la experiencia de usuario.",
+      "Desarrollo y mantenimiento de módulos front-end utilizando Three.js para gráficos 3D interactivos.",
+      "Gestión de versiones mediante Bitbucket colaborando bajo metodología Scrum.",
+      "Foco permanente en la optimización de la experiencia de usuario y rendimiento web.",
     ],
   },
   {
@@ -133,40 +134,40 @@ export const services: Service[] = [
     number: "01",
     title: "Desarrollo web Full Stack",
     description:
-      "Construcción de aplicaciones de punta a punta: interfaces dinámicas con React, Vue o Angular y back-ends robustos con Symfony, Java, TypeScript o Python.",
-    tags: ["React.js", "Vue.js", "Angular.js", "Symfony", "Java", "TypeScript"],
+      "Construcción de aplicaciones de punta a punta: interfaces dinámicas con React, Vue, Angular o Three.js y back-ends robustos con Nest.js, Symfony, Java, TypeScript o Python.",
+    tags: ["Nest.js", "React.js", "Three.js", "TypeScript", "Symfony", "Java"],
   },
   {
     id: "datos",
     number: "02",
     title: "Bases de datos",
     description:
-      "Diseño e implementación de bases de datos MySQL y PL/SQL con foco en integridad, normalización y optimización de consultas para aplicaciones exigentes.",
-    tags: ["MySQL", "PL/SQL", "SQL", "Modelado de datos"],
+      "Diseño e implementación de bases de datos PostgreSQL, MySQL y PL/SQL con foco en integridad, normalización y optimización de consultas para aplicaciones exigentes.",
+    tags: ["PostgreSQL", "MySQL", "PL/SQL", "SQL"],
   },
   {
     id: "apis",
     number: "03",
     title: "APIs e integraciones",
     description:
-      "Desarrollo de APIs —como la API en Python de Stark Lower— e integración con el front-end para una comunicación de datos fluida y confiable.",
-    tags: ["Python", "REST", "Redux", "Integraciones"],
+      "Desarrollo y documentación de APIs utilizando Swagger, asegurando una integración ágil y comunicación fluida de datos con el front-end.",
+    tags: ["Swagger", "REST", "TypeScript", "Python"],
   },
   {
     id: "deploy",
     number: "04",
     title: "Despliegue & servidores",
     description:
-      "Soluciones desplegadas y administradas en servidores Linux, orientadas a maximizar rendimiento, estabilidad y disponibilidad en producción.",
-    tags: ["Linux", "Deploy", "Rendimiento"],
+      "Contenedores Docker y despliegues mediante Azure DevOps en servidores locales y en la nube para garantizar estabilidad y CI/CD.",
+    tags: ["Docker", "Azure DevOps", "Bitbucket", "Linux"],
   },
   {
     id: "docs",
     number: "05",
-    title: "Documentación & soporte",
+    title: "Metodologías & soporte",
     description:
-      "Documentación técnica y funcional, acompañamiento a usuarios y participación activa en todas las fases del ciclo de vida del software.",
-    tags: ["SDLC", "Documentación", "Soporte a usuarios"],
+      "Gestión de proyectos bajo metodología ágil Scrum, documentación técnica y funcional, acompañamiento a usuarios y soporte del ciclo de vida del software.",
+    tags: ["Scrum", "SDLC", "Azure DevOps", "Bitbucket"],
   },
 ];
 
@@ -192,14 +193,14 @@ export const skillGroups: SkillGroup[] = [
     category: "Frameworks & librerías",
     note: "Front y back",
     icon: "layers",
-    skills: ["Symfony", "React.js", "Angular.js", "Vue.js", "Redux", "Java"],
+    skills: ["Nest.js", "Three.js", "Symfony", "React.js", "Angular.js", "Vue.js", "Redux", "Java"],
   },
   {
     id: "herramientas",
     category: "Herramientas & datos",
     note: "El día a día",
     icon: "tools",
-    skills: ["MySQL", "Linux", "Power BI", "Excel", "Word"],
+    skills: ["PostgreSQL", "MySQL", "Docker", "Azure DevOps", "Bitbucket", "Swagger", "Scrum", "Linux"],
   },
 ];
 
@@ -210,27 +211,42 @@ export const toolbox = [
   "PHP",
   "TypeScript",
   "JavaScript",
+  "Nest.js",
+  "Three.js",
   "Symfony",
   "React.js",
   "Angular.js",
   "Vue.js",
   "Redux",
   "Java",
+  "PostgreSQL",
   "MySQL",
+  "Docker",
+  "Azure DevOps",
+  "Bitbucket",
+  "Swagger",
+  "Scrum",
   "Linux",
-  "Power BI",
 ];
 
 /* ── Cifras ─────────────────────────────────────────────── */
 export const counters = [
   { value: 3, suffix: "+", label: "años de experiencia" },
   { value: 6, suffix: "", label: "empresas & equipos" },
-  { value: 12, suffix: "+", label: "tecnologías en el stack" },
+  { value: 16, suffix: "+", label: "tecnologías en el stack" },
   { value: 2, suffix: "", label: "programas de formación" },
 ];
 
 /* ── Marquee ────────────────────────────────────────────── */
 export const marqueeItems = [
+  "Nest.js",
+  "Three.js",
+  "PostgreSQL",
+  "Docker",
+  "Azure DevOps",
+  "Bitbucket",
+  "Swagger",
+  "Scrum",
   "TypeScript",
   "JavaScript",
   "Python",
@@ -243,7 +259,6 @@ export const marqueeItems = [
   "Redux",
   "MySQL",
   "Linux",
-  "Power BI",
 ];
 
 /* ── Navegación ─────────────────────────────────────────── */
