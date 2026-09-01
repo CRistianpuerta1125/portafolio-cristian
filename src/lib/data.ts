@@ -466,23 +466,23 @@ const projectsES: ProjectItem[] = [
     category: "Experiencia 3D & WebGL",
     company: "Proyecto Personal / 3D Engine",
     featured: true,
+    image: "/projects/jardin-3d.png",
     description:
       "Simulación interactiva tridimensional en tiempo real desarrollada con Three.js, React y TypeScript, enfocada en visualización inmersiva, iluminación ambiental, física y renderizado fluido.",
     tags: ["Three.js", "React.js", "TypeScript", "WebGL", "Framer Motion", "TailwindCSS"],
-    demoUrl: "https://garden-3d.vercel.app", // o enlace personal / local
-    githubUrl: "https://github.com",
+    demoUrl: "https://garden3d.vercel.app/",
   },
   {
     id: "web-empresarial",
-    title: "Web Empresarial & Plataforma de Servicios",
+    title: "Web Empresarial — Kluane",
     category: "Full Stack & Corporativo",
-    company: "TESTLAB / IDRD",
+    company: "Kluane / Enterprise Platform",
     featured: true,
+    image: "/projects/web-empresarial.png",
     description:
-      "Plataforma web corporativa de alto rendimiento con arquitectura modular, diseño responsivo de primer nivel, integración de APIs REST, autenticación y gestión de datos relacionales.",
+      "Plataforma web corporativa de alto rendimiento con arquitectura modular, diseño responsivo de primer nivel, integración de servicios REST, interfaz intuitiva y gestión de datos.",
     tags: ["Nest.js", "React.js", "PostgreSQL", "Docker", "REST API", "TailwindCSS"],
-    demoUrl: "https://empresa-demo.vercel.app",
-    githubUrl: "https://github.com",
+    demoUrl: "https://kluane.vercel.app/",
   },
   {
     id: "pagina-navidad",
@@ -490,11 +490,11 @@ const projectsES: ProjectItem[] = [
     category: "Frontend & Experiencia Web",
     company: "Edición Festiva",
     featured: false,
+    image: "/projects/pagina-navidad.png",
     description:
-      "Landing page temática interactiva con efectos visuales dinámicos, micro-animaciones en tiempo real, diseño UI/UX navideño y rendimiento web optimizado.",
+      "Landing page temática interactiva con efectos visuales dinámicos, micro-animaciones en tiempo real, diseño UI/UX festivo y rendimiento web optimizado.",
     tags: ["React.js", "TypeScript", "TailwindCSS", "Animations", "UI/UX"],
-    demoUrl: "https://navidad-demo.vercel.app",
-    githubUrl: "https://github.com",
+    demoUrl: "https://navidad-mom.netlify.app/",
   },
 ];
 
@@ -505,23 +505,23 @@ const projectsEN: ProjectItem[] = [
     category: "3D Experience & WebGL",
     company: "Personal Project / 3D Engine",
     featured: true,
+    image: "/projects/jardin-3d.png",
     description:
       "Interactive 3D real-time simulation built with Three.js, React, and TypeScript, focused on immersive visualization, ambient lighting, physics, and smooth rendering.",
     tags: ["Three.js", "React.js", "TypeScript", "WebGL", "Framer Motion", "TailwindCSS"],
-    demoUrl: "https://garden-3d.vercel.app",
-    githubUrl: "https://github.com",
+    demoUrl: "https://garden3d.vercel.app/",
   },
   {
     id: "web-empresarial",
-    title: "Enterprise Web Platform",
+    title: "Enterprise Web Platform — Kluane",
     category: "Full Stack & Corporate",
-    company: "TESTLAB / IDRD",
+    company: "Kluane / Enterprise Platform",
     featured: true,
+    image: "/projects/web-empresarial.png",
     description:
-      "High-performance corporate web platform featuring modular architecture, premium responsive design, REST API integrations, authentication, and relational data management.",
+      "High-performance corporate web platform featuring modular architecture, premium responsive design, REST API integrations, intuitive UI, and data management.",
     tags: ["Nest.js", "React.js", "PostgreSQL", "Docker", "REST API", "TailwindCSS"],
-    demoUrl: "https://empresa-demo.vercel.app",
-    githubUrl: "https://github.com",
+    demoUrl: "https://kluane.vercel.app/",
   },
   {
     id: "pagina-navidad",
@@ -529,11 +529,11 @@ const projectsEN: ProjectItem[] = [
     category: "Frontend & Web Experience",
     company: "Festive Edition",
     featured: false,
+    image: "/projects/pagina-navidad.png",
     description:
       "Interactive thematic landing page featuring dynamic visual effects, real-time micro-animations, festive UI/UX design, and optimized web performance.",
     tags: ["React.js", "TypeScript", "TailwindCSS", "Animations", "UI/UX"],
-    demoUrl: "https://navidad-demo.vercel.app",
-    githubUrl: "https://github.com",
+    demoUrl: "https://navidad-mom.netlify.app/",
   },
 ];
 
