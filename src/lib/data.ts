@@ -446,11 +446,107 @@ export const marqueeItems = [
   "Linux",
 ];
 
+/* ── Proyectos ──────────────────────────────────────────── */
+export interface ProjectItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  tags: string[];
+  company?: string;
+  featured?: boolean;
+  demoUrl?: string;
+  githubUrl?: string;
+}
+
+const projectsES: ProjectItem[] = [
+  {
+    id: "jardin-3d",
+    title: "Jardín 3D Interactivo",
+    category: "Experiencia 3D & WebGL",
+    company: "Proyecto Personal / 3D Engine",
+    featured: true,
+    description:
+      "Simulación interactiva tridimensional en tiempo real desarrollada con Three.js, React y TypeScript, enfocada en visualización inmersiva, iluminación ambiental, física y renderizado fluido.",
+    tags: ["Three.js", "React.js", "TypeScript", "WebGL", "Framer Motion", "TailwindCSS"],
+    demoUrl: "https://garden-3d.vercel.app", // o enlace personal / local
+    githubUrl: "https://github.com",
+  },
+  {
+    id: "web-empresarial",
+    title: "Web Empresarial & Plataforma de Servicios",
+    category: "Full Stack & Corporativo",
+    company: "TESTLAB / IDRD",
+    featured: true,
+    description:
+      "Plataforma web corporativa de alto rendimiento con arquitectura modular, diseño responsivo de primer nivel, integración de APIs REST, autenticación y gestión de datos relacionales.",
+    tags: ["Nest.js", "React.js", "PostgreSQL", "Docker", "REST API", "TailwindCSS"],
+    demoUrl: "https://empresa-demo.vercel.app",
+    githubUrl: "https://github.com",
+  },
+  {
+    id: "pagina-navidad",
+    title: "Página de Navidad Interactiva",
+    category: "Frontend & Experiencia Web",
+    company: "Edición Festiva",
+    featured: false,
+    description:
+      "Landing page temática interactiva con efectos visuales dinámicos, micro-animaciones en tiempo real, diseño UI/UX navideño y rendimiento web optimizado.",
+    tags: ["React.js", "TypeScript", "TailwindCSS", "Animations", "UI/UX"],
+    demoUrl: "https://navidad-demo.vercel.app",
+    githubUrl: "https://github.com",
+  },
+];
+
+const projectsEN: ProjectItem[] = [
+  {
+    id: "jardin-3d",
+    title: "Interactive 3D Garden",
+    category: "3D Experience & WebGL",
+    company: "Personal Project / 3D Engine",
+    featured: true,
+    description:
+      "Interactive 3D real-time simulation built with Three.js, React, and TypeScript, focused on immersive visualization, ambient lighting, physics, and smooth rendering.",
+    tags: ["Three.js", "React.js", "TypeScript", "WebGL", "Framer Motion", "TailwindCSS"],
+    demoUrl: "https://garden-3d.vercel.app",
+    githubUrl: "https://github.com",
+  },
+  {
+    id: "web-empresarial",
+    title: "Enterprise Web Platform",
+    category: "Full Stack & Corporate",
+    company: "TESTLAB / IDRD",
+    featured: true,
+    description:
+      "High-performance corporate web platform featuring modular architecture, premium responsive design, REST API integrations, authentication, and relational data management.",
+    tags: ["Nest.js", "React.js", "PostgreSQL", "Docker", "REST API", "TailwindCSS"],
+    demoUrl: "https://empresa-demo.vercel.app",
+    githubUrl: "https://github.com",
+  },
+  {
+    id: "pagina-navidad",
+    title: "Interactive Christmas Web Page",
+    category: "Frontend & Web Experience",
+    company: "Festive Edition",
+    featured: false,
+    description:
+      "Interactive thematic landing page featuring dynamic visual effects, real-time micro-animations, festive UI/UX design, and optimized web performance.",
+    tags: ["React.js", "TypeScript", "TailwindCSS", "Animations", "UI/UX"],
+    demoUrl: "https://navidad-demo.vercel.app",
+    githubUrl: "https://github.com",
+  },
+];
+
+export function getProjects(lang: Language): ProjectItem[] {
+  return lang === "en" ? projectsEN : projectsES;
+}
+
 /* ── Navegación ─────────────────────────────────────────── */
 export function getNavLinks(lang: Language) {
   if (lang === "en") {
     return [
       { label: "Experience", href: "#experiencia" },
+      { label: "Projects", href: "#proyectos" },
       { label: "Services", href: "#servicios" },
       { label: "Stack", href: "#stack" },
       { label: "About me", href: "#sobre" },
@@ -458,6 +554,7 @@ export function getNavLinks(lang: Language) {
   }
   return [
     { label: "Experiencia", href: "#experiencia" },
+    { label: "Proyectos", href: "#proyectos" },
     { label: "Servicios", href: "#servicios" },
     { label: "Stack", href: "#stack" },
     { label: "Sobre mí", href: "#sobre" },

@@ -40,8 +40,8 @@ export default function Footer() {
           <Reveal variant="mask">
             <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-amber">
               {isEn
-                ? "(06) — Have a project in mind?"
-                : "(06) — ¿Tienes un proyecto en mente?"}
+                ? "(07) — Have a project in mind?"
+                : "(07) — ¿Tienes un proyecto en mente?"}
             </span>
           </Reveal>
           <Reveal variant="mask" delay={140}>

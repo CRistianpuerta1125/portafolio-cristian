@@ -2,6 +2,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Marquee from "./components/Marquee";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Stack from "./components/Stack";
 import About from "./components/About";
@@ -29,6 +30,7 @@ export default function App() {
           <Hero />
           <Marquee />
           <Experience />
+          <Projects />
           <Services />
           <Stack />
           <About />
