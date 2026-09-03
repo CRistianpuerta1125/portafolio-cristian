@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0d1a1d;
-  --color-deep: #102227;
-  --color-card: #142b30;
-  --color-line: #24464c;
-  --color-mist: #e8f1ee;
-  --color-fog: #92aaa5;
-  --color-amber: #f2b441;
-  --color-coral: #ff6f59;
-  --color-pine: #2e6e6a;
+  --color-ink: #050505;
+  --color-deep: #0e0e0e;
+  --color-card: #141414;
+  --color-line: #262626;
+  --color-mist: #ffffff;
+  --color-fog: #a3a3a3;
+  --color-amber: #ffffff;
+  --color-coral: #e5e5e5;
+  --color-pine: #262626;
 
   --font-display: "Syne", "Space Grotesk", sans-serif;
   --font-body: "Space Grotesk", system-ui, sans-serif;
@@ -56,8 +56,8 @@ body {
 
 /* ---------- fondo ambiental ---------- */
 .bg-grid {
-  background-image: linear-gradient(rgba(146, 170, 165, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(146, 170, 165, 0.06) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
   mask-image: radial-gradient(ellipse 90% 80% at 50% 20%, black 30%, transparent 78%);
   -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 20%, black 30%, transparent 78%);
@@ -76,7 +76,7 @@ body {
 .hero-glow {
   background: radial-gradient(
     620px circle at var(--mx, 72%) var(--my, 30%),
-    rgba(242, 180, 65, 0.09),
+    rgba(255, 255, 255, 0.08),
     transparent 62%
   );
 }
