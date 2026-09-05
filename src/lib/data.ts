@@ -22,11 +22,10 @@ export interface ExperienceItem {
 
 const experienceES: ExperienceItem[] = [
   {
-    period: "Abr 2025 — Actualidad",
+    period: "Abr 2025 — Ago 2025",
     role: "Desarrollador Full Stack",
     company: "Instituto Distrital de Recreación y Deporte — IDRD",
     place: "Bogotá, Colombia",
-    current: true,
     highlights: [
       "Desarrollo web front-end y back-end de punta a punta con Nest.js, PostgreSQL y Docker.",
       "Diseño e implementación de bases de datos relacionales.",
@@ -96,11 +95,10 @@ const experienceES: ExperienceItem[] = [
 
 const experienceEN: ExperienceItem[] = [
   {
-    period: "Apr 2025 — Present",
+    period: "Apr 2025 — Aug 2025",
     role: "Full Stack Developer",
     company: "District Institute of Recreation and Sport — IDRD",
     place: "Bogotá, Colombia",
-    current: true,
     highlights: [
       "End-to-end front-end and back-end web development with Nest.js, PostgreSQL, and Docker.",
       "Relational database design and implementation.",
